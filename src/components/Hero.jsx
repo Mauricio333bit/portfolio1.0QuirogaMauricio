@@ -26,12 +26,7 @@ const Hero = () => {
           </p>
           <h1 className=" sm:text-5xl text-2xl font-bold md:pt-6 md:pb-4  aspect-auto md:aspect-[24/9] lg:aspect-auto  ">
             <TypeAnimation
-              sequence={[
-                "Desarrollador FullStack",
-                2000,
-                "Programador Web",
-                2000,
-              ]}
+              sequence={["Desarrollador de Software", 2000, "", 1000]}
               wrapper="span"
               speed={200}
               repeat={Infinity}
@@ -43,7 +38,6 @@ const Hero = () => {
           <div className="flex gap-3 text-[#ff8722] justify-center sm:justify-start">
             <AiFillGithub className="size-16 icon"></AiFillGithub>
             <AiFillLinkedin className="size-16 icon"></AiFillLinkedin>
-            <AiFillGoogleCircle className="size-16 icon"></AiFillGoogleCircle>
           </div>
           <div className="flex gap-2 my-4 text-gray-300 items-center flex-col sm:flex-row">
             Tech Stack |

@@ -11,10 +11,8 @@ const About = () => {
           </p>
 
           <p className="text-md sm:text-2xl my-2 mb-3 text-gray-200">
-            Actualmente estoy en el ultimo año de la Tecnicatura en Desarrollo
-            de Software, tambien he concretado bootcamps de Programación de
-            Oracle, JavaScript-FullSatck y Java-Spring en la agencia Codo a
-            Codo.
+          Soy Técnico Superior en Desarrollo de Software, además he complementado con capacitaciones certificadas de Programación brindadas por
+          Oracle, Java-FullStack y Java-Spring en la agencia Codo a Codo. Por lo que tengo conocimientos en Frontend y Backend.
           </p>
           <p className="text-[#ff8722] text-xl pb-4">
             Para mi la programación es una forma de arte, cada linea de codigo

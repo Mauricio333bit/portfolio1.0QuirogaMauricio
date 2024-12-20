@@ -1,76 +1,103 @@
 import React, { useState } from "react";
 import proj1 from "../assets/proj1.png";
+import proj3 from "../assets/proj3.jpg";
+import htlm from "../assets/html5.svg";
 
 const Projects = () => {
-  const [visibleProjects, setVisibleProjects] = useState(4); // inicialmente mostrar 2 proyectos
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
   const projects = [
-    // tu arreglo de proyectos aquí
-    proj1,
-    proj1,
-    proj1,
-    proj1,
-    proj1,
-    proj1,
-    proj1,
-    proj1,
+    {
+      title: "Proyecto 1",
+      description:
+        "Este proyecto fue desarrollado utilizando HTML, CSS y JavaScript para construir una interfaz interactiva. Implementé técnicas de diseño responsivo y optimización de recursos.",
+      img: proj1, // Uso directo de importaciones de imágenes
+      link: "https://ejemplo.com/proyecto1",
+      technologies: [htlm, "../assets/css.svg", "../assets/javascript.svg"],
+    },
+    {
+      title: "Proyecto 2",
+      description:
+        "Desarrollé una aplicación web usando React y Spring Boot, que incluye funcionalidades avanzadas como autenticación y manejo de estados globales.",
+      img: proj3,
+      link: "https://ejemplo.com/proyecto2",
+      technologies: ["react.svg", "../assets/spring.svg"],
+    },
+    {
+      title: "Proyecto 3",
+      description:
+        "Construí un sistema de gestión de base de datos utilizando MySQL y una API backend con Java, asegurando un rendimiento eficiente.",
+      img: proj1,
+      link: "https://ejemplo.com/proyecto3",
+      technologies: ["../assets/mysql.svg", "../assets/java.svg"],
+    },
   ];
 
-  const projectChunks = projects.reduce((resultArray, item, index) => {
-    const chunkIndex = Math.floor(index / 2);
-
-    if (!resultArray[chunkIndex]) {
-      resultArray[chunkIndex] = [];
-    }
-
-    resultArray[chunkIndex].push(item);
-
-    return resultArray;
-  }, []);
-
-  const showMoreProjects = () => {
-    setVisibleProjects(visibleProjects + 2); // mostrar 2 proyectos más
+  // Manejar navegación de proyectos
+  const handlePrevious = () => {
+    setSelectedIndex((prevIndex) =>
+      prevIndex === 0 ? projects.length - 1 : prevIndex - 1
+    );
   };
+
+  const handleNext = () => {
+    setSelectedIndex((prevIndex) =>
+      prevIndex === projects.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const selectedProject = projects[selectedIndex];
 
   return (
     <div
       className="gap-4 max-w-[1200px] flex items-center flex-col justify-center mx-auto p-4"
       id="projects"
     >
-      <div className=" w-full text-center sm:text-start ">
-        <h2 className="text-gray-200 md:text-5xl sm:text-4xl text-3xl font-bold text-gray mt-4 mb-6">
+      <div className="w-full text-center sm:text-start">
+        <h2 className="text-gray-200 md:text-5xl sm:text-4xl text-3xl font-bold mt-4 mb-6">
           Mis <span>proyectos</span>
         </h2>
       </div>
-      <div className="grid md:grid-cols-2 sm:grid-cols-2 gap-4">
-        {projectChunks
-          .slice(0, visibleProjects / 2)
-          .map((chunk, chunkIndex) => (
-            <React.Fragment key={chunkIndex}>
-              {chunk.map((project, index) => (
-                <a
-                  key={`${chunkIndex}-${index}`}
-                  href="/"
-                  className=" group overflow-hidden rounded-3xl"
-                >
-                  <img
-                    src={project}
-                    alt="proyecto1"
-                    loading="lazy"
-                    className=" inset-0 h-full w-full object-cover object-center transition duration-500 group-hover:scale-110 rounded-3xl"
-                  />
-                </a>
-              ))}
-            </React.Fragment>
-          ))}
-      </div>
-      {visibleProjects < projects.length && (
-        <button
-          onClick={showMoreProjects}
-          className=" text-white font-bold py-2 px-4 rounded mt-4"
+
+      {/* Mostrar proyecto seleccionado */}
+      <div className="text-center">
+        <img
+          src={selectedProject.img}
+          alt={selectedProject.title}
+          className="w-full max-w-md mx-auto rounded-lg"
+        />
+        <h3 className="text-xl font-semibold mt-4">{selectedProject.title}</h3>
+        <p className="text-gray-400 mt-2">{selectedProject.description}</p>
+        <a
+          href={selectedProject.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-400 underline mt-2 inline-block"
         >
-          Mostrar más
+          Ver proyecto
+        </a>
+        <div className="flex justify-center gap-2 mt-4">
+          {selectedProject.technologies.map((tech, index) => (
+            <img key={index} src={tech} alt="Technology" className="w-8 h-8" />
+          ))}
+        </div>
+      </div>
+
+      {/* Botones de navegación */}
+      <div className="flex gap-4 mt-6">
+        <button
+          onClick={handlePrevious}
+          className=" bg-gray-700 text-gray-200 px-4 py-2 rounded-md hover:bg-gray-600"
+        >
+          {"<"}
         </button>
-      )}
+        <button
+          onClick={handleNext}
+          className="bg-gray-700 text-gray-200 px-4 py-2 rounded-md hover:bg-gray-600"
+        >
+          {">"}
+        </button>
+      </div>
     </div>
   );
 };
