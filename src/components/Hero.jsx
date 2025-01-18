@@ -37,8 +37,8 @@ const Hero = () => {
             +2 años programando
           </p>
           <div className="flex gap-3 text-[#ff8722] justify-center sm:justify-start">
-            <AiFillGithub className="size-16 icon"></AiFillGithub>
-            <AiFillLinkedin className="size-16 icon"></AiFillLinkedin>
+            <a href="https://github.com/Mauricio333bit"><AiFillGithub className="size-16 icon"></AiFillGithub></a>
+            <a href="https://www.linkedin.com/in/mauricio-quiroga-7b8b00246/"><AiFillLinkedin className="size-16 icon"></AiFillLinkedin></a>
           </div>
           <div className="flex gap-2 my-4 text-gray-300 items-center flex-col sm:flex-row">
             Tech Stack |
