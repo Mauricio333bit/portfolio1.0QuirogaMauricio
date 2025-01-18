@@ -2,10 +2,10 @@ import React from "react";
 import {
   AiFillLinkedin,
   AiFillGithub,
-  AiFillGoogleCircle,
+  
 } from "react-icons/ai";
 import { TypeAnimation } from "react-type-animation";
-import profilePhoto from "../assets/pro333.png";
+import profilePhoto from "../assets/pr.png";
 import reactIcon from "../assets/react.svg";
 import javaIcon from "../assets/java.svg";
 import jsIcon from "../assets/javascript.svg";
@@ -15,6 +15,7 @@ import ccsIcon from "../assets/css.svg";
 import springIcon from "../assets/spring.svg";
 import htmlIcon from "../assets/html5.svg";
 import mysqlIcon from "../assets/mysql.svg";
+import cvPDF from '../assets/CV_MauricioQuiroga-Dev.pdf'
 
 const Hero = () => {
   return (
@@ -63,9 +64,15 @@ const Hero = () => {
               <img src={mysqlIcon} alt="html icon" className="icon size-9" />
             </div>
           </div>
-          <button className="w-[250px] mx-auto ">
-            <a href="/">Descargar CV</a>
-          </button>
+          <button className="w-[250px] mx-auto">
+  <a 
+    href={cvPDF} 
+    download="CV_MauricioQuiroga-Dev.pdf"
+    className="block w-full"
+  >
+    Descargar CV
+  </a>
+</button>
         </div>
         <div className="my-auto p-5">
           <img
