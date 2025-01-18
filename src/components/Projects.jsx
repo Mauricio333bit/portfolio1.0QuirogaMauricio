@@ -5,7 +5,6 @@ import jsIcon from "../assets/javascript.svg";
 import bootstrapIcon from "../assets/bootstrap.svg";
 import tailwindIcon from "../assets/tailwindcss.svg";
 import ccsIcon from "../assets/css.svg";
-import springIcon from "../assets/spring.svg";
 import htmlIcon from "../assets/html5.svg";
 import mysqlIcon from "../assets/mysql.svg";
 import nodeIcon from "../assets/nodejs.svg";
@@ -15,13 +14,11 @@ import appNotas from "../assets/appNotas.webp"
 import avico from "../assets/avico.webp"
 import bom from "../assets/bom.webp"
 import cac from "../assets/cac.webp"
-import campus from "../assets/campus.webp"
 import clieAcc from "../assets/clieAcc.webp"
 import lbo from "../assets/lbo.webp"
 import lpPaula from "../assets/lpPaula.webp"
 import rh from "../assets/rh.webp"
 import rym from "../assets/rym.webp"
-import SiAvicola from "../assets/SiAvicola.webp"
 
 
 const Projects = () => {
