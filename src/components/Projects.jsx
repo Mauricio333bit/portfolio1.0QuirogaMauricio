@@ -68,7 +68,7 @@ const Projects = () => {
     {
       title: "Proyecto CaC",
       description:
-        "Proyecto integrador donde aplicamos la manimpulacion del dom para hacer una pagina interactiva y conectada a base de datos",
+        "Proyecto integrador donde aplicamos la manipulacion del Dom para hacer una pagina interactiva y conectada a base de datos",
       img: cac,
       link: "https://github.com/Mauricio333bit/1erProyectoIntegrador",
       technologies: [htmlIcon, ccsIcon, jsIcon,nodeIcon,mysqlIcon],
