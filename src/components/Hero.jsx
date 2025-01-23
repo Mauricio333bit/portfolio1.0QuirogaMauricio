@@ -22,16 +22,12 @@ const Hero = () => {
     <div id="home">
       <div className="gap-4  max-w-[1200px]  flex items-center flex-col-reverse md:flex-row justify-center mx-auto p-4   ">
         <div className=" md:w-3/5 w-full text-center sm:text-start">
-          <p className="text-gray-200 md:text-5xl sm:text-4xl text-3xl font-bold text-gray">
-            Hola! Soy Mauricio Quiroga 👋🏽
+          <p className="text-gray-200 md:text-4xl sm:text-3xl text-2xl font-bold text-gray">
+            Hola! Soy Mauricio 👋🏽
           </p>
-          <h1 className=" sm:text-5xl text-2xl font-bold md:pt-6 md:pb-4  aspect-auto md:aspect-[24/9] lg:aspect-auto  ">
-            <TypeAnimation
-              sequence={["Desarrollador de Software", 2000, "", 1000]}
-              wrapper="span"
-              speed={200}
-              repeat={Infinity}
-            ></TypeAnimation>
+          <h1 className=" sm:text-5xl text-3xl font-bold md:pt-6 md:pb-4  aspect-auto md:aspect-[24/9] lg:aspect-auto primary-color   ">
+           
+            Desarrollador de Software
           </h1>
           <p className="text-xl sm:text-4xl my-2 mb-3 text-gray-200">
             +2 años programando
@@ -40,7 +36,7 @@ const Hero = () => {
             <a href="https://github.com/Mauricio333bit"><AiFillGithub className="size-16 icon"></AiFillGithub></a>
             <a href="https://www.linkedin.com/in/mauricio-quiroga-7b8b00246/"><AiFillLinkedin className="size-16 icon"></AiFillLinkedin></a>
           </div>
-          <div className="flex gap-2 my-4 text-gray-300 items-center flex-col sm:flex-row">
+          <div className="flex gap-2 my-8 text-gray-300 items-center flex-col sm:flex-row">
             Tech Stack |
             <div className="flex gap-2">
               <img src={htmlIcon} alt="html icon" className="icon size-9" />
