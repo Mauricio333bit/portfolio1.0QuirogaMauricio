@@ -4,7 +4,6 @@ import {
   AiFillGithub,
   
 } from "react-icons/ai";
-import { TypeAnimation } from "react-type-animation";
 import profilePhoto from "../assets/pr.png";
 import reactIcon from "../assets/react.svg";
 import javaIcon from "../assets/java.svg";
