@@ -11,10 +11,10 @@ import jsIcon from "../assets/javascript.svg";
 import bootstrapIcon from "../assets/bootstrap.svg";
 import tailwindIcon from "../assets/tailwindcss.svg";
 import ccsIcon from "../assets/css.svg";
-import springIcon from "../assets/spring.svg";
+import nodeIcon from "../assets/nodejs.svg";
 import htmlIcon from "../assets/html5.svg";
 import mysqlIcon from "../assets/mysql.svg";
-import cvPDF from '../assets/CV_MauricioQuiroga-Dev.pdf'
+import cvPDF from '../assets/CV-QUIROGA-FullStack-Dev.pdf'
 
 const Hero = () => {
   return (
@@ -54,8 +54,12 @@ const Hero = () => {
               <img src={reactIcon} alt="react icon" className="icon size-9" />
             </div>
             <div className="flex gap-2">
+            <img
+                src={nodeIcon}
+                alt="tailwind icon"
+                className="icon size-9"
+              />
               <img src={javaIcon} alt="java icon" className="icon size-9" />
-              <img src={springIcon} alt="spring icon" className="icon size-9" />
               <img src={mysqlIcon} alt="html icon" className="icon size-9" />
             </div>
           </div>
